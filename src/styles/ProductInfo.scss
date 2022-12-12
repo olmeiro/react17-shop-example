@@ -1,0 +1,46 @@
+@use './_vars.scss';
+
+.ProductInfo {
+  margin: 24px 24px 0 24px;
+}
+
+.ProductInfo p:nth-child(1) {
+  font-weight: bold;
+  font-size: var(--md);
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.ProductInfo p:nth-child(2) {
+  color: var(--very-light-pink);
+  font-size: var(--md);
+  margin-top: 0;
+  margin-bottom: 36px;
+}
+
+.ProductInfo p:nth-child(3) {
+  color: var(--very-light-pink);
+  font-size: var(--sm);
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 640px) {
+  .product-detail {
+    width: 100%;
+  }
+}
+
+.dots {
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 0 2px;
+  background-color: var(--very-light-pink);
+  border-radius: 50%;
+  /* display: inline-block; */
+}

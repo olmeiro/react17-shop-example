@@ -1,30 +1,23 @@
 import React from 'react'
 
-import '../styles/Login.scss'
+import '../styles/NewPassword.scss'
 
-import logo from '../../public/logos/logo_yard_sale.svg';
-
-const Login = () => {
+const NewPassword = () => {
   return (
-    <div className="login">
-      <div className="form-container">
-        <img src={logo} alt="logo" className="login-logo" />
-
+    <div className="NewPassword">
+      <div className="NewPassword-container">
+        <img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
         <h1 className="title">Create a new password</h1>
-        <p className="subtitle">Enter a new password for yourzs account</p>
-
+        <p className="subtitle">Enter a new passwrd for yue account</p>
         <form action="/" className="form">
           <label for="password" className="label">Password</label>
           <input type="password" id="password" placeholder="*********" className="input input-password" />
-
           <label for="new-password" className="label">Password</label>
           <input type="password" id="new-password" placeholder="*********" className="input input-password" />
-
           <input type="submit" value="Confirm" className="primary-button login-button" />
         </form>
       </div>
     </div>
   )
 }
-
-export default Login;
+export default NewPassword
