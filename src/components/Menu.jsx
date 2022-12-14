@@ -4,10 +4,10 @@ import '../styles/Menu.scss'
 
 const Menu = () => {
   return (
-    <div class="Menu-container">
+    <div className="Menu">
       <ul>
         <li>
-          <a class="title" href="/">My orders</a>
+          <a href="/" className="title">My orders</a>
         </li>
         <li>
           <a href="/">My account</a>
@@ -17,6 +17,7 @@ const Menu = () => {
         </li>
       </ul>
     </div>
-  )
+  );
 }
+
 export default Menu
