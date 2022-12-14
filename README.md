@@ -56,3 +56,21 @@ devServer: {
   compress: true,
   port: 3005,
 }
+
+
+### agregamos plugin de babel para async await:
+npm install @babel/plugin-transform-runtime
+
+en .babelrc agregamos:
+  "plugins": [
+    "@babel/plugin-transform-runtime"
+  ]
+
+## API Fake:
+https://fakeapi.platzi.com/
+[GET] https://api.escuelajs.co/api/v1/products
+https://fakeapi.platzi.com/doc/products
+
+[GET] https://api.escuelajs.co/api/v1/categories
+[GET] https://api.escuelajs.co/api/v1/users
+
