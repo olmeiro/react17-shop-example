@@ -74,3 +74,5 @@ https://fakeapi.platzi.com/doc/products
 [GET] https://api.escuelajs.co/api/v1/categories
 [GET] https://api.escuelajs.co/api/v1/users
 
+### Deploy en GitHub Pages:
+https://github.com/marketplace/actions/deploy-to-github-pages
