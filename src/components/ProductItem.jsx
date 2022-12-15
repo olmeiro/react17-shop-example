@@ -10,9 +10,9 @@ const ProductItem = ({ product }) => {
     setCart([]);
   }
   return (
-    <div class="ProductItem">
+    <div className="ProductItem">
       <img src={product.images[0]} alt={product.title} />
-      <div class="product-info">
+      <div className="product-info">
         <div>
           <p>${product.price}</p>
           <p>{product.title}</p>
