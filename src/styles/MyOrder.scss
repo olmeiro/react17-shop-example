@@ -17,18 +17,18 @@
   border: 1px solid var(--very-light-pink);
   animation: swipeLeft 1s ease forwards;
 
-  /*en caso de no querer bottom usamos scroll*/
   overflow-y: auto;
-  height: 550px;
+  max-height: 840px;
+  -webkit-animation: swipeLeft 1s ease forwards;
 }
 
 @keyframes swipeLeft {
   100% {
-    transform: translateX(-50px);
-    -webkit-transform: translateX(-50px);
-    -moz-transform: translateX(-50px);
-    -ms-transform: translateX(-50px);
-    -o-transform: translateX(-50px);
+    transform: translateX(-40px);
+    -webkit-transform: translateX(-40px);
+    -moz-transform: translateX(-40px);
+    -ms-transform: translateX(-40px);
+    -o-transform: translateX(-40px);
 }
 }
   
@@ -84,8 +84,41 @@
   height: 50px;
 }
 
+.cart-product-order {
+  max-height: calc(100vh - 440px);
+  overflow-y: auto;
+}
+
+/* width */
+.cart-product-order::-webkit-scrollbar {
+  display: none;
+}
+
+ .cart-product-order::-webkit-scrollbar-thumb:active {
+   background-color: #999999;
+ }
+
+/* Track */
+.cart-product-order::-webkit-scrollbar-track {
+  background: #e1e1e1;
+  border-radius: 4px;
+}
+
+/* Handle */
+.cart-product-order::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+.cart-product-order::-webkit-scrollbar-thumb:hover {
+  background: var(--hospital-green);
+  box-shadow: 0 0 2px 1px rgba (0, 0, 0, 0.2);
+}
+
+
 @media (max-width: 640px) {
   .MyOrder {
-    width: 100%;
+    width: 90%;
   }
 }
