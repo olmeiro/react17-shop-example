@@ -15,22 +15,21 @@
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
   border: 1px solid var(--very-light-pink);
-  animation: swipeLeft 0.26x ease;
-  -webkit-animation: swipeLeft 0.26x ease;
+  animation: swipeLeft 1s ease forwards;
 
   /*en caso de no querer bottom usamos scroll*/
-  // overflow-y: auto;
-  // height: 550px;
+  overflow-y: auto;
+  height: 550px;
 }
 
 @keyframes swipeLeft {
-  0% {
-      width: 0;
-    }
-  
-    100% {
-      width: 360px;
-    }
+  100% {
+    transform: translateX(-50px);
+    -webkit-transform: translateX(-50px);
+    -moz-transform: translateX(-50px);
+    -ms-transform: translateX(-50px);
+    -o-transform: translateX(-50px);
+}
 }
   
 .title-container {

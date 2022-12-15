@@ -76,3 +76,8 @@ https://fakeapi.platzi.com/doc/products
 
 ### Deploy en GitHub Pages:
 https://github.com/marketplace/actions/deploy-to-github-pages
+
+
+## Issues:
+https://github.com/platzi/react-practico/issues
+
