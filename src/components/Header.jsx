@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 
 import '@styles/Header.scss'
 import Menu from '@components/Menu'
@@ -8,8 +8,13 @@ import logo from '@logos/logo_yard_sale.svg'
 import cart from '@icons/icon_shopping_cart.svg'
 import arrow from '@icons/flechita.svg'
 
+import AppContext from '../context/AppContext'
+
 const Header = () => {
   const [toggle, setToggle] = useState(false);
+
+  const { state } = useContext(AppContext);
+
   const handleToggle = () => {
     setToggle(!toggle);
   }
@@ -51,7 +56,9 @@ const Header = () => {
 
           <li className="navbar-shopping-cart">
             <img src={cart} alt="shopping cart" />
-            <div>2</div>
+            {
+              state.cart.length > 0 ? <div>{state.cart.length}</div> : null
+            }
           </li>
         </ul>
       </div>
