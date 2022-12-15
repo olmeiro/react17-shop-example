@@ -9,9 +9,11 @@ import cart from '@icons/icon_shopping_cart.svg'
 import arrow from '@icons/flechita.svg'
 
 import AppContext from '../context/AppContext'
+import MyOrder from '../containers/MyOrder'
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
+  const [toggleOrders, setToggleOrders] = useState(false);
 
   const { state } = useContext(AppContext);
 
@@ -54,7 +56,10 @@ const Header = () => {
             <img src={arrow} />
           </li>
 
-          <li className="navbar-shopping-cart">
+          <li
+            className="navbar-shopping-cart"
+            onClick={() => setToggleOrders(!toggleOrders)}
+          >
             <img src={cart} alt="shopping cart" />
             {
               state.cart.length > 0 ? <div>{state.cart.length}</div> : null
@@ -64,6 +69,9 @@ const Header = () => {
       </div>
       {
         toggle && <Menu />
+      }
+      {
+        toggleOrders && <MyOrder />
       }
     </nav>
   )

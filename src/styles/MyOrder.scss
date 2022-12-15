@@ -6,6 +6,31 @@
   box-sizing: border-box;
   position: absolute;
   right: 0;
+  background-color: white;
+  top: 60px;
+  bottom: auto;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border: 1px solid var(--very-light-pink);
+  animation: swipeLeft 0.26x ease;
+  -webkit-animation: swipeLeft 0.26x ease;
+
+  /*en caso de no querer bottom usamos scroll*/
+  // overflow-y: auto;
+  // height: 550px;
+}
+
+@keyframes swipeLeft {
+  0% {
+      width: 0;
+    }
+  
+    100% {
+      width: 360px;
+    }
 }
   
 .title-container {
