@@ -12,7 +12,7 @@ const OrderItem = ({ product, indexValue }) => {
     removeFromCart(index)
   }
   return (
-    <div class="OrderItem">
+    <div className="OrderItem">
       <figure>
         <img src={product.images[0]} alt={product.title} />
       </figure>

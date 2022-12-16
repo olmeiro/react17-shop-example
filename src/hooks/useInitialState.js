@@ -20,10 +20,15 @@ const useInitialState = () => {
       cart: state.cart.filter((_, idx) => idx != indexValue)
     })
   }
+
+  const insideCart = (productId) => {
+    return state.cart.some(product => product.id === productId)
+  }
   return {
     state,
     addToCart,
-    removeFromCart
+    removeFromCart,
+    insideCart
   }
 }
 

@@ -3,16 +3,19 @@ import React, { useState, useContext } from 'react'
 import '../styles/ProductItem.scss'
 
 import addToCartSVG from '@icons/bt_add_to_cart.svg'
-// import addedToCartSVG from '@icons/bt_added_to_cart.svg'
+import addedToCartSVG from '@icons/bt_added_to_cart.svg'
 
 import AppContext from '../context/AppContext'
 
 const ProductItem = ({ product }) => {
 
-  const { addToCart } = useContext(AppContext);
+  const { addToCart, removeFromCart, insideCart } = useContext(AppContext);
+
+  const [added, setAdded] = useState(false);
 
   const handleClick = (item) => {
-    addToCart(item);
+    added ? removeFromCart(item) : addToCart(item);
+    setAdded(!added);
   }
   return (
     <div className="ProductItem">
@@ -25,7 +28,9 @@ const ProductItem = ({ product }) => {
         <figure
           onClick={() => handleClick(product)}
         >
-          <img src={addToCartSVG} alt="" />
+          {insideCart(product.id)
+            ? <img src={addedToCartSVG} alt={product.title} />
+            : <img src={addToCartSVG} alt={product.title} />}
         </figure>
       </div>
     </div>
