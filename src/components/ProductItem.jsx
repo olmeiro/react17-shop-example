@@ -3,6 +3,7 @@ import React, { useState, useContext } from 'react'
 import '../styles/ProductItem.scss'
 
 import addToCartSVG from '@icons/bt_add_to_cart.svg'
+// import addedToCartSVG from '@icons/bt_added_to_cart.svg'
 
 import AppContext from '../context/AppContext'
 
