@@ -10,19 +10,32 @@ import arrow from '@icons/flechita.svg'
 
 import AppContext from '../context/AppContext'
 import MyOrder from '../containers/MyOrder'
+import MenuMobile from './MenuMobile'
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   const [toggleOrders, setToggleOrders] = useState(false);
+  const [menuMobile, setMenuMobile] = useState(false);
 
   const { state } = useContext(AppContext);
 
   const handleToggle = () => {
     setToggle(!toggle);
   }
+
+  const handleMenuMobile = () => {
+    setMenuMobile(!menuMobile);
+  }
+
   return (
     <nav>
-      <img src={menu} alt="menu" className="menu" />
+
+      <img
+        src={menu}
+        alt="menu"
+        className="menu"
+        onClick={handleMenuMobile}
+      />
 
       <div className="navbar-left">
         <img src={logo} alt="logo" className="navbar-logo" />
@@ -72,6 +85,9 @@ const Header = () => {
       }
       {
         toggleOrders && <MyOrder toggleOrders={toggleOrders} setToggleOrders={setToggleOrders} />
+      }
+      {
+        menuMobile && <MenuMobile />
       }
     </nav>
   )
