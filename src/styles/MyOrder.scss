@@ -34,11 +34,13 @@
   
 .title-container {
   display: flex;
+  align-items: baseline;
 }
 
 .title-container img {
   transform: rotate(180deg);
   margin-right: 14px;
+ 
 }
 
 .title {

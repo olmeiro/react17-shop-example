@@ -71,7 +71,7 @@ const Header = () => {
         toggle && <Menu />
       }
       {
-        toggleOrders && <MyOrder />
+        toggleOrders && <MyOrder toggleOrders={toggleOrders} setToggleOrders={setToggleOrders} />
       }
     </nav>
   )

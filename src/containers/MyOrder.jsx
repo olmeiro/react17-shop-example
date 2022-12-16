@@ -7,7 +7,7 @@ import '../styles/MyOrder.scss'
 import arrow from '@icons/flechita.svg'
 import AppContext from '../context/AppContext'
 
-const MyOrder = () => {
+const MyOrder = ({ toggleOrders, setToggleOrders }) => {
 
   const { state } = useContext(AppContext);
 
@@ -19,15 +19,19 @@ const MyOrder = () => {
     return sum;
   }
 
+  const closeModal = () => {
+    setToggleOrders(!toggleOrders)
+  }
+
   return (
-    <aside class="MyOrder">
-      <div class="title-container">
-        <img src={arrow} alt="arrow" />
-        <p class="title">My order</p>
+    <aside className="MyOrder">
+      <div className="title-container">
+        <img src={arrow} alt="arrow" onClick={closeModal} />
+        <p className="title">My order</p>
       </div>
 
-      <div class="my-order-content">
-        <div className='cart-product-order'>
+      <div className="my-order-content">
+        <div classNameName='cart-product-order'>
           {
             state.cart.map((item, idx) => (
               <OrderItem indexValue={idx} key={item.idx} product={item} />
@@ -35,14 +39,14 @@ const MyOrder = () => {
           }
         </div>
         {/* <!-- order --> */}
-        <div class="order">
+        <div className="order">
           <p>
             <span>Total</span>
           </p>
           <p>${sumTotal()}</p>
         </div>
 
-        <button class="primary-button">
+        <button className="primary-button">
           Checkout
         </button>
       </div>
