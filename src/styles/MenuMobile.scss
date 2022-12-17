@@ -1,0 +1,70 @@
+@use './_vars.scss';
+
+    .mobile-menu {
+      padding: 24px;
+      position: absolute;
+      width: 70%;
+      height: 80vh;
+      top: 61px;
+      left: 0;
+      background-color: var(--white);
+      opacity: 0.98;
+      border-bottom-right-radius: 5px;
+      box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+     
+}
+  
+.mobile-menu ul {
+  padding: 0;
+  margin: 24px 0 0;
+  list-style: none;
+}
+
+.mobile-menu ul:nth-child(2) {
+  border-bottom: 1px solid var(--very-light-pink);
+}
+
+.mobile-menu ul:nth-child(4) {
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+}
+
+.mobile-menu ul li {
+  margin-bottom: 8px;
+}
+
+.mobile-menu ul li a {
+  width: 100%;
+  padding: 12px;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--black);
+  font-weight: bold;
+}
+
+.mobile-menu ul li a:hover {
+  background-color: var(--very-light-pink);
+  width: 94%;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: .3s;
+  -webkit-transition: .3s;
+}
+
+.email {
+  font-size: var(--sm);
+  font-weight: 300 !important;
+}
+
+.sign-out {
+  font-weight: var(--sm);
+  color: var(--hospital-green) !important;
+}
+
+@media (min-width: 640px){
+  .mobile-menu {
+    display:none;
+  }
+}
